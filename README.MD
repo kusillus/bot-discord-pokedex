@@ -7,7 +7,7 @@
 This bot consults the information of **Pokeapi** to show data of a specific Pokémon, you can consult a pokemon using its name or national pokedex number.
 You can add this bot to your discord server using the following [link](https://discord.com/api/oauth2/authorize?client_id=718628054393421885&permissions=67648&scope=bot).
 
-Este bot consulta la información de **Pokeapi** para mostrar datos de un Pokémon en especifico, puedes consultar a un pokemon usando su nombre o numero de pokedex nacional.
+Este bot consulta la información de **Pokeapi** para mostrar datos de un Pokémon en específico, puedes consultar a un pokemon usando su nombre o número de pokedex nacional.
 Puedes agregar este bot a tu servidor de discord usando el siguiente [link](https://discord.com/api/oauth2/authorize?client_id=718628054393421885&permissions=67648&scope=bot).
 
 ## Social
