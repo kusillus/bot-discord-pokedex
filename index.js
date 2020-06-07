@@ -1,8 +1,8 @@
 require('dotenv').config()
-const {Client, MessageAttachment, MessageEmbed} = require('discord.js'),
+const {Client, MessageEmbed} = require('discord.js'),
       axios = require('axios'),
       BASE_URL = 'https://pokeapi.co/api/v2/',
-      client = new Client();
+      client = new Client()
 
 function cardPokemonInfo(data){
   let num_dex =  data.id
@@ -32,7 +32,7 @@ function cardPokemonInfo(data){
       return {name: slot.stat.name, value: slot.base_stat, inline: true}
     })) 
     .setTimestamp()
-    .setFooter('@rotomdexdiscord', 'https://i.imgur.com/0T7ZabG.png');
+    .setFooter('fb.com/rotomdexdiscord', 'https://i.imgur.com/0T7ZabG.png');
 
     return exampleEmbed
 }
@@ -51,7 +51,7 @@ client.on('message', async msg => {
         msg.channel.send(cardPokemonInfo(response.data))
       })
       .catch(error => {
-        msg.reply('Pokemon no encontrado TnT')
+        msg.reply('Pokémon no encontrado TnT')
       })
     }
     else {

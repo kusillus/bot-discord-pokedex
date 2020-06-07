@@ -10,6 +10,9 @@ You can add this bot to your discord server using the following [link](https://d
 Este bot consulta la información de **Pokeapi** para mostrar datos de un Pokémon en especifico, puedes consultar a un pokemon usando su nombre o numero de pokedex nacional.
 Puedes agregar este bot a tu servidor de discord usando el siguiente [link](https://discord.com/api/oauth2/authorize?client_id=718628054393421885&permissions=67648&scope=bot).
 
+## Social
+[Rotomdex Discord](https://www.facebook.com/rotomdexdiscord/)
+
 ## HOW TO USE
 
 `!pokemon [number or name]`
