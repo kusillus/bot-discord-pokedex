@@ -1,7 +1,7 @@
 {
-  "name": "discord-bot",
+  "name": "rotomdex-discord",
   "version": "1.0.0",
-  "description": "## RUN",
+  "description": "This bot consults the information of **Pokeapi** to show data of a specific Pokémon, you can consult a pokemon using its name or national pokedex number.You can add this bot to your discord server using the following [link](https://discord.com/api/oauth2/authorize?client_id=718628054393421885&permissions=67648&scope=bot)",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -10,7 +10,7 @@
   },
   "author": "kusillus",
   "license": "ISC",
-  "keywords": [],
+  "keywords": ["pokemon", "pokedex", "rotomdex","bot", "discord", "discord bot"],
   "dependencies": {
     "axios": "^0.19.2",
     "discord.js": "^12.2.0",

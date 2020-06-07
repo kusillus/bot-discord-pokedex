@@ -13,8 +13,6 @@ function cardPokemonInfo(data){
   const exampleEmbed = new MessageEmbed()
     .setColor('#0099ff')
     .setTitle(data.name)
-    // .setAuthor('kusillus', 'https://i.imgur.com/KFICjor.jpg', 'https://kusillus.com')
-    // .setDescription('Some description here')
     .setURL(`https://www.pokemon.com/es/pokedex/${data.id}`)
     .setThumbnail(data.sprites.front_default)
     .setImage(`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${num_dex}.png`)
@@ -33,10 +31,8 @@ function cardPokemonInfo(data){
     .addFields( data.stats.map( slot => {
       return {name: slot.stat.name, value: slot.base_stat, inline: true}
     })) 
-    // .addField('Inline field title', 'Some value here', true)
-    // .setImage('https://i.imgur.com/wSTFkRM.png')
     .setTimestamp()
-    .setFooter('kusillus.com', 'https://i.imgur.com/KFICjor.jpg');
+    .setFooter('@rotomdexdiscord', 'https://i.imgur.com/0T7ZabG.png');
 
     return exampleEmbed
 }
@@ -52,43 +48,15 @@ client.on('message', async msg => {
     if(u_msg[1]) {
       axios.get(`${BASE_URL}pokemon/${u_msg[1]}`)
       .then(response => {
-        console.log('response', response.data)
-        // msg.reply('todo ok')
         msg.channel.send(cardPokemonInfo(response.data))
-        
       })
       .catch(error => {
-        console.log('Error', error)
-        msg.reply('Salio un error')
+        msg.reply('Pokemon no encontrado TnT')
       })
     }
     else {
       msg.reply('¿Qué pokémon quieres buscar?')
     }
-  }
-  if (msg.content === 'ping') {
-    msg.reply('Pong!');
-  }
-  if(msg.content === 'my avatar') {
-    const exampleEmbed = new MessageEmbed()
-    .setColor('#0099ff')
-    .setTitle('Some title')
-    .setURL('https://discord.js.org/')
-    .setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
-    .setDescription('Some description here')
-    .setThumbnail('https://i.imgur.com/wSTFkRM.png')
-    .addFields(
-      { name: 'Regular field title', value: 'Some value here' },
-      { name: '\u200B', value: '\u200B' },
-      { name: 'Inline field title', value: 'Some value here', inline: true },
-      { name: 'Inline field title', value: 'Some value here', inline: true },
-    )
-    .addField('Inline field title', 'Some value here', true)
-    .setImage('https://i.imgur.com/wSTFkRM.png')
-    .setTimestamp()
-    .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
-
-    msg.channel.send(exampleEmbed)
   }
 });
 
